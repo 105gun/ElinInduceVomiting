@@ -1,0 +1,11 @@
+<Meta>
+	<title>Induce Vomiting</title>
+	<id>induce_vomiting</id>
+	<author>105gun</author>
+	<loadPriority>100</loadPriority>
+    <description>增加一个催吐技能，可对自己或盟友使用，每次增加30%饥饿值。适合喜欢频繁进食的大胃王玩家。
+Adds an Induce Vomiting ability that can be used on yourself or an ally. 30% increase in hunger value each time.Ideal for players who want to eat frequently.
+嘔吐スキルを追加する。 自分または味方に使用することで、空腹度を30%増加させることができる。 頻繁に食事をする食欲旺盛なプレイヤーに向いている。</description>
+	<version>0.23.55</version>
+    <tags>Skill</tags>
+</Meta>
