@@ -18,7 +18,7 @@ public enum InduceVomitingLogLevel
     Debug
 };
 
-[BepInPlugin("105gun.inducevomiting.mod", "Human Resource", "1.1.1.0")]
+[BepInPlugin("105gun.inducevomiting.mod", "Human Resource", "1.2.0.0")]
 public class Plugin : BaseUnityPlugin
 {
     static InduceVomitingLogLevel pluginLogLevel = InduceVomitingLogLevel.Info;
@@ -34,15 +34,11 @@ public class Plugin : BaseUnityPlugin
 
     private void LoadData()
     {
-		var dir = Path.GetDirectoryName(Info.Location);
-		var excel = dir + "/Data/SourceCard.xlsx";
-		var sources = Core.Instance.sources;
-		ModUtil.ImportExcel(excel, "Element", sources.elements);
+        var dir = Path.GetDirectoryName(Info.Location);
 
         ClassCache.caches.Create<AI_InduceVomiting>("InduceVomitingMod.AI_InduceVomiting", "ElinInduceVomiting");
 
-        // Icon of AI_CQC
-        
+        // Icon of AI_InduceVomiting
         Texture2D tex = IO.LoadPNG(dir + "/Texture/AI_InduceVomiting.png");
         tex.name = "InduceVomitingMod.AI_InduceVomiting";
         Sprite newSprite = Sprite.Create(tex,new Rect(0,0,tex.width, tex.height), Vector2.one * 0.5f);

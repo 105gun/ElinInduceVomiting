@@ -51,13 +51,13 @@ public class AI_InduceVomiting : AI_TargetCard
         if (chara == null)
         {
             Msg.SetColor("ono");
-            Msg.SayRaw($"Target missing. ");
+            Msg.SayRaw("vomit_say_0".lang());
             yield break;
         }
         if (chara.hunger.value >= 95)
         {
             Msg.SetColor("ono");
-            Msg.SayRaw($"Target's body is empty. ");
+            Msg.SayRaw("vomit_say_1".lang());
             yield break;
         }
         if (chara.hunger.value > 70)
@@ -65,7 +65,7 @@ public class AI_InduceVomiting : AI_TargetCard
             if (!warning)
             {
                 Msg.SetColor("ono");
-                Msg.SayRaw($"Target's stomach is almost empty. ");
+                Msg.SayRaw("vomit_say_2".lang());
                 warning = true;
                 yield break;
             }
